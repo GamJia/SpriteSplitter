@@ -1,0 +1,67 @@
+{
+  "package_version": 2,
+  "version": "1.0.0",
+  "name": "spritesplitter",
+  "description": "Splits a selected texture into smaller pieces based on rows and columns.",
+  "main": "./dist/main.js",
+  "panels": {
+    "index": {
+      "title": "Sprite Splitter",
+      "main": "./dist/panels/index.js",
+      "type": "dockable",
+      "size": {
+        "min-width": 300,
+        "min-height": 300
+      }
+    }
+  },
+  "contributions": {
+    "menu": [
+      {
+        "path": "Sprite Splitter",
+        "label": "Open Panel",
+        "message": "spritesplitter:OpenPanel"
+      }
+    ],
+    "messages": {
+      "spritesplitter:OpenPanel": {
+        "methods": [
+          "OpenPanel"
+        ]
+      },
+      "spritesplitter:SplitByGrid": {
+        "methods": [
+          "SplitByGrid"
+        ]
+      },
+      "spritesplitter:SplitByPixelSize": {
+        "methods": [
+          "SplitByPixelSize"
+        ]
+      },
+      "spritesplitter:CreatePlistFromFolder": {
+        "methods": [
+          "CreatePlistFromFolder"
+        ]
+      }
+    }
+  },
+  "author": "GamJia",
+  "editor": ">=3.8.0",
+  "scripts": {
+    "build": "tsc -b && copyfiles -u 2 source/panels/*.{html,css,js,png} dist/panels",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@cocos/creator-types": "^3.8.6",
+    "@types/node": "^18.x",
+    "@types/plist": "^3.0.5",
+    "copyfiles": "^2.4.1",
+    "typescript": "^4.x"
+  },
+  "dependencies": {
+    "plist": "^3.1.0",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.34.1"
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite Splitter</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="sprite-splitter-container">
+    <ui-prop name="Sprite Frame">
+      <div class="sprite-row">
+        <label for="assetInput" class="sprite-label">Sprite</label>
+        <ui-asset id="assetInput" droppable="asset" type="cc.SpriteFrame">Drop Sprite Here</ui-asset>
+      </div>
+      <div class="grid-mode-row">
+          <label for="gridMode">Type</label>
+          <select id="gridMode">
+            <option value="cellSize">Grid By Cell Size</option>
+            <option value="cellCount">Grid By Cell Count</option>
+          </select>
+        </div>
+    </ui-prop>
+
+    <input type="hidden" id="selectedPath" />
+
+    <div id="cellSizeInputs" class="grid-inputs">
+      <label>Pixel Size</label>
+      <div class="xy-pair">
+        <span>X</span><input type="number" id="xInput" placeholder="64" value="64" />
+      </div>
+      <div class="xy-pair">
+        <span>Y</span><input type="number" id="yInput" placeholder="64" value="64" />
+      </div>
+    </div>
+
+    <div id="cellCountInputs" class="grid-inputs" style="display: none;">
+      <label>Column&Rows</label>
+      <div class="xy-pair">
+        <span>C</span><input type="number" id="colsInput" placeholder="1" value="1" />
+      </div>
+      <div class="xy-pair">
+        <span>R</span><input type="number" id="rowsInput" placeholder="1" value="1" />
+      </div>
+    </div>
+
+    <button id="convertButton">Convert</button>
+    <div id="statusLog" style="display: none;">Status Log</div>
+  </div>
+</body>
+</html>

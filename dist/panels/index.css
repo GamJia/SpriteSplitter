@@ -1,0 +1,168 @@
+body {
+  background-color: #383838;
+  color: #c8c8c8;
+  padding: 15px 15px 0px 15px;
+  font-size: 13px;
+}
+
+.sprite-splitter-container {
+  background-color: #444444;
+  padding: 10px;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  max-width: 450px;
+  margin: auto;
+}
+
+ui-prop {
+  display: block;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #505050;
+}
+
+ui-prop:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.sprite-row,
+.grid-inputs,
+.grid-mode-row {
+  display: flex;
+  align-items: center;
+  gap: 3px; 
+  margin-bottom: 10px;
+}
+
+.sprite-label, 
+.grid-mode-row > label, 
+.grid-inputs > label { 
+  white-space: nowrap;
+  font-size: 13px;
+  color: #b0b0b0;
+  min-width: 70px;
+  flex-shrink: 0; 
+  text-align: left;
+}
+
+#cellCountInputs > label[style*="font-size: 9px"] {
+    font-size: 9px !important;
+    min-width: auto; 
+}
+
+#gridMode,
+ui-asset,
+input[type="number"] {
+  background-color: #2e2e2e;
+  border: 1px solid #202020;
+  color: #c8c8c8;
+  padding: 5px 8px;
+  font-size: 13px;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.2);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+#gridMode:focus,
+input[type="number"]:focus {
+  border-color: #5f9ef8;
+}
+
+ui-asset {
+  background-color: #333333;
+  border: 1px dashed #666666;
+  padding: 10px;
+  min-width: 100px;
+  text-align: center;
+  color: #888888;
+  font-size: 12px;
+  flex-grow: 1; 
+}
+
+ui-asset:hover {
+  border-color: #888888;
+  background-color: #3a3a3a;
+}
+
+#gridMode {
+  flex-grow: 1; 
+}
+
+input[type="number"] {
+  width: 55px; 
+  text-align: left;
+}
+
+.grid-inputs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.grid-inputs label {
+  min-width: 70px;
+  flex-shrink: 0;
+  text-align: left;
+  margin-right: auto;
+}
+
+.xy-pair {
+  display: flex;
+  align-items: center;
+  gap: 4px; 
+  margin-left: 5px;
+}
+
+.xy-pair span {
+  color: white;
+  font-size: 13px;
+}
+
+.xy-pair input[type="number"] {
+  width: 50px;
+}
+
+#xInput,
+#colsInput {
+  margin-left: auto;
+}
+
+#convertButton {
+  background-color: #565656;
+  color: #e0e0e0;
+  border: 1px solid #202020;
+  padding: 6px 15px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#convertButton:hover {
+  background-color: #606060;
+}
+
+#convertButton:active {
+  background-color: #4a4a4a;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+}
+
+#statusLog {
+  background-color: #303030;
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #a0a0a0;
+  margin-top: 10px;
+  border: 1px solid #252525;
+  display: none;
+  text-align: left;
+}
+
+
